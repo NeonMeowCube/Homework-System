@@ -1,0 +1,215 @@
+:root {
+  --bg-color: #F5F5F0;
+  --text-color: #333333;
+  --header-color: #4B4A47;
+  --card-bg: #EDECE8;
+  --accent-color: #7C6D62;
+  --border-color: #D8D6CD;
+  --watermark-color: #A9A79E;
+}
+
+[data-theme="dark"] {
+  --bg-color: #2C2C2C;
+  --text-color: #E0E0E0;
+  --header-color: #1F1F1F;
+  --card-bg: #3A3A3A;
+  --accent-color: #B8A68F;
+  --border-color: #444444;
+  --watermark-color: #888888;
+}
+
+/* 📱 Base = Mobile styles */
+body {
+  font-family: 'Noto Sans', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-size: 1rem;
+  margin: 0;
+  padding: 0;
+  padding-top: 3.5rem;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--header-color);
+  color: var(--bg-color);
+  text-align: center;
+  padding: 0.4rem;
+  box-shadow: 0 0.2rem 0.5rem rgba(0,0,0,0.08);
+  z-index: 999;
+  font-size: 2.5rem;
+}
+
+.day-block {
+  background-color: #fff;
+  border: 0.1rem solid var(--border-color);
+  padding: 0.8rem;
+  border-radius: 0.6rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.04);
+}
+
+#date-selection {
+  margin: 1.5rem auto;
+  padding: 1rem;
+  max-width: 95%;
+  background-color: var(--card-bg);
+  border-radius: 0.5rem;
+  box-shadow: 0 0.1rem 0.3rem rgba(0,0,0,0.08);
+}
+
+#date-selection h2 {
+  margin-top: 0;
+  color: var(--accent-color);
+  font-size: 1.2rem;
+}
+
+#date-form label {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-size: 0.8rem;
+}
+
+#date-form input[type="date"] {
+  padding: 0.4rem;
+  font-size: 1.2rem;
+  border: 0.1rem solid var(--border-color);
+  border-radius: 0.3rem;
+  background-color: white;
+  width: 100%;
+}
+
+#date-form button {
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  border-radius: 0.3rem;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+  font-size: 1rem;
+}
+
+#homework {
+  max-width: 95%;
+  margin: 1.5rem auto;
+  padding: 0.8rem;
+  font-size: 1rem;
+}
+
+#homework h3 {
+  background-color: var(--accent-color);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.4rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-weight: 500;
+  font-size: 1.4rem;
+}
+
+#homework h4 {
+  margin-bottom: 0.5rem;
+  color: var(--header-color);
+}
+
+#homework ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#homework li {
+  background-color: var(--card-bg);
+  border-left: 0.3rem solid var(--accent-color);
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 0.4rem;
+  box-shadow: 0 0.1rem 0.2rem rgba(0,0,0,0.04);
+  position: relative;
+}
+
+#ExInfo {
+  font-size: 0.8rem;
+  color: var(--text-color);
+  margin-top: 0.2rem;
+}
+
+.watermark {
+  position: absolute;
+  right: 0.8rem;
+  bottom: 0.4rem;
+  font-size: 0.6rem;
+  color: var(--watermark-color);
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+/* 💻 Tablet and up */
+@media screen and (min-width: 769px) {
+  body {
+    font-size: 1.5rem;
+  }
+
+  header {
+    font-size: 4rem;
+    padding: 0rem;
+  }
+
+  #date-selection,
+  #homework {
+    max-width: 90%;
+    padding: 1rem;
+    font-size: 2.5rem;
+  }
+
+  #date-form button {
+    font-size: 1.1rem;
+  }
+
+  #homework h3 {
+    font-size: 2rem;
+  }
+
+  #date-selection h2 {
+    font-size: 1.4rem;
+  }
+
+  #date-form label {
+    font-size: 0.9rem;
+  }
+
+  #date-form input[type="date"] {
+    font-size: 1.2rem;
+  }
+
+  #ExInfo {
+    font-size: 1.2rem;
+  }
+}
+
+/* 🖥️ Desktop large screens */
+@media screen and (min-width: 1200px) {
+  header {
+    font-size: 3rem;
+  }
+
+  #date-selection,
+  #homework {
+    max-width: 70%;
+    font-size: 1.3rem;
+  }
+
+  #homework h3 {
+    font-size: 1.5rem;
+  }
+
+  #date-selection h2 {
+    font-size: 1.5rem;
+  }
+}
